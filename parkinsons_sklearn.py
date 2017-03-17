@@ -14,32 +14,15 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
 # load the dataset (local path)
-url = "datasets/parkinsons_data.txt"
+url = "datasets/parkinsons_data.csv"
 # feature names
 features = ["name","MDVP:Fo(Hz)","MDVP:Fhi(Hz)","MDVP:Flo(Hz)","MDVP:Jitter(%)","MDVP:Jitter(Abs)","MDVP:RAP","MDVP:PPQ","Jitter:DDP","MDVP:Shimmer","MDVP:Shimmer(dB)","Shimmer:APQ3","Shimmer:APQ5","MDVP:APQ","Shimmer:DDA","NHR","HNR","status","RPDE","DFA","spread1","spread2","D2","PPE"]
 dataset = pandas.read_csv(url, names = features)
 
 # dataset dimensions
 print(dataset.shape)
-# first 20 instances (rows) of the data)
-print(dataset.head(20))
-# statistical summary of the dataset (mean, min, max, count, std, etc)
-print(dataset.describe())
 # class distrubution (number of instances that belong to each class of flower)
 print(dataset.groupby('class').size())
-
-# box-and-whisker univariate plots (plots of each individual variable)
-dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
-plt.savefig('box-and-whisker-plots.png', dpi=100)
-plt.show()
-# histogram univariate plots
-dataset.hist()
-plt.savefig('histograms.png', dpi=100)
-plt.show()
-# scatter plot matrix multivariate plot
-scatter_matrix(dataset)
-plt.savefig('scatter-matrix.png', dpi=100)
-plt.show()
 
 # store the dataset as an array for easier processing
 array = dataset.values
@@ -60,7 +43,7 @@ seed = 7
 # use the 'accuracy' metric to evaluate models (correct / total)
 scoring = 'accuracy'
 
-# algorithms / models
+# algorithms
 models = []
 models.append(('LR', LogisticRegression()))
 models.append(('LDA', LinearDiscriminantAnalysis()))
@@ -86,7 +69,7 @@ fig.suptitle('Algorithm comparison')
 ax = fig.add_subplot(111)
 plt.boxplot(results)
 ax.set_xticklabels(names)
-plt.savefig('Algorithm-comparison.png')
+plt.savefig('parkinsons_algorithm_comparison.png')
 plt.show()
 
 # using KNN to make predictions about the validation set
