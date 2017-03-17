@@ -66,11 +66,3 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.savefig('Parkinsons-algorithm-comparison.png')
 plt.show()
-
-# using KNN to make predictions about the validation set
-dt = DecisionTreeClassifier()
-dt.fit(X_train, Y_train)
-predictions = dt.predict(X_validation)
-print(accuracy_score(Y_validation, predictions))
-print(confusion_matrix(Y_validation, predictions))
-print(classification_report(Y_validation, predictions))
