@@ -64,7 +64,7 @@ fig.suptitle('Algorithm comparison')
 ax = fig.add_subplot(111)
 plt.boxplot(results)
 ax.set_xticklabels(names)
-plt.savefig('Algorithm-comparison.png')
+plt.savefig('Parkinsons-algorithm-comparison.png')
 plt.show()
 
 # using KNN to make predictions about the validation set
