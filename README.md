@@ -1,2 +1,2 @@
-# ISEF-Alzheimers-Parkinsons-Diagnosis
+# Science-Fair-Alzheimers-Parkinsons-Diagnosis
 Synopsys / ISEF project: Disease classification and diagnosis for Alzheimer's and Parkinson's
