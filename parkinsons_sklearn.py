@@ -19,7 +19,7 @@ url = "datasets/parkinsons_data.txt"
 features = ["name","MDVP:Fo(Hz)","MDVP:Fhi(Hz)","MDVP:Flo(Hz)","MDVP:Jitter(%)","MDVP:Jitter(Abs)","MDVP:RAP","MDVP:PPQ","Jitter:DDP","MDVP:Shimmer","MDVP:Shimmer(dB)","Shimmer:APQ3","Shimmer:APQ5","MDVP:APQ","Shimmer:DDA","NHR","HNR","status","RPDE","DFA","spread1","spread2","D2","PPE"]
 dataset = pandas.read_csv(url, names = features)
 
-# dataset dimensions (should be (150,5) --> 150 instances, 5 attributes)
+# dataset dimensions
 print(dataset.shape)
 # first 20 instances (rows) of the data)
 print(dataset.head(20))
@@ -43,10 +43,10 @@ plt.show()
 
 # store the dataset as an array for easier processing
 array = dataset.values
-# X stores feature values (every row, 0 through 3rd column)
-X = array[:,0:4]
-# Y stores "answers", the flower species / class (every row, 4th column)
-Y = array[:,4]
+# X stores feature values
+X = array[:,1:23]
+# Y stores "answers"
+Y = array[:,23]
 validation_size = 0.20
 # randomize which part of the data is training and which part is validation
 seed = 7
