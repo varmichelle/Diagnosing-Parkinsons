@@ -6,6 +6,7 @@ from sklearn import cross_validation
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import matthews_corrcoef
 from sklearn.tree import DecisionTreeClassifier
 
 # load the dataset (local path)
@@ -26,13 +27,6 @@ seed = 7
 # split dataset into training set (80%) and validation set (20%)
 X_train, X_validation, Y_train, Y_validation = cross_validation.train_test_split(X, Y, test_size = validation_size, random_state = seed)
 
-# 10-fold cross validation to estimate accuracy (split data into 10 parts; use 9 parts to train and 1 for test)
-num_folds = 10
-num_instances = len(X_train)
-seed = 7
-# use the 'accuracy' metric to evaluate models (correct / total)
-scoring = 'accuracy'
-
 # using DT to make predictions about the validation set
 dt = DecisionTreeClassifier()
 dt.fit(X_train, Y_train)
@@ -40,3 +34,4 @@ predictions = dt.predict(X_validation)
 print(accuracy_score(Y_validation, predictions))
 print(confusion_matrix(Y_validation, predictions))
 print(classification_report(Y_validation, predictions))
+print(matthews_corrcoef(Y_validation, predictions))

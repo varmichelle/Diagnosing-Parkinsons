@@ -1,8 +1,8 @@
 # import all necessary libraries
 import pandas
 from pandas.tools.plotting import scatter_matrix
-import matplotlib.pyplot as plt
 from sklearn import cross_validation
+from sklearn.metrics import matthews_corrcoef
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
@@ -57,12 +57,6 @@ for name, model in models:
     results.append(cv_results)
     names.append(name)
     print(name, ":", 100.0*cv_results.mean(), "%")
-
-# plot algorithm comparison (boxplot)
-fig = plt.figure()
-fig.suptitle('Algorithm comparison')
-ax = fig.add_subplot(111)
-plt.boxplot(results)
-ax.set_xticklabels(names)
-plt.savefig('Parkinsons-algorithm-comparison.png')
-plt.show()
+    model.fit(X_train, Y_train)
+    predictions = model.predict(X_validation)
+    print(matthews_corrcoef(Y_validation, predictions))
