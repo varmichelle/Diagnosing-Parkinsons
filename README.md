@@ -18,6 +18,11 @@ Matthews Coefficient: 0.366
 Accuracy: 84.1%  
 Matthews Coefficient: 0.634
 
-### Support Vector machine
+### Support Vector Machine
 Accuracy: 78.1%  
 Matthews Coefficient: 0.000
+
+## Boosted Algorithm Performance
+### Gradient Boost
+Accuracy: 94.9%
+Matthews Coefficient: 0.820
