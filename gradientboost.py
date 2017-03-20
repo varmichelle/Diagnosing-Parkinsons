@@ -8,9 +8,10 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import matthews_corrcoef
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 # load the dataset (local path)
-url = "parkinsons_data.csv"
+url = "data.csv"
 # feature names
 features = ["MDVP:Fo(Hz)","MDVP:Fhi(Hz)","MDVP:Flo(Hz)","MDVP:Jitter(%)","MDVP:Jitter(Abs)","MDVP:RAP","MDVP:PPQ","Jitter:DDP","MDVP:Shimmer","MDVP:Shimmer(dB)","Shimmer:APQ3","Shimmer:APQ5","MDVP:APQ","Shimmer:DDA","NHR","HNR","RPDE","DFA","spread1","spread2","D2","PPE","status"]
 dataset = pandas.read_csv(url, names = features)
@@ -27,11 +28,15 @@ seed = 7
 # split dataset into training set (80%) and validation set (20%)
 X_train, X_validation, Y_train, Y_validation = cross_validation.train_test_split(X, Y, test_size = validation_size, random_state = seed)
 
-# using DT to make predictions about the validation set
-dt = DecisionTreeClassifier()
-dt.fit(X_train, Y_train)
-predictions = dt.predict(X_validation)
+clf = GradientBoostingClassifier(n_estimators=10000)
+clf.fit(X_train, Y_train)
+predictions = clf.predict(X_validation)
+
+print("Accuracy")
 print(accuracy_score(Y_validation, predictions))
+print("Confusion Matrix")
 print(confusion_matrix(Y_validation, predictions))
+print("Classification Report")
 print(classification_report(Y_validation, predictions))
+print("Matthews Correlation Coefficient")
 print(matthews_corrcoef(Y_validation, predictions))
