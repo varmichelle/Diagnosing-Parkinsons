@@ -12,6 +12,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
+from sklearn.preprocessing import MinMaxScaler
 
 # load the dataset (local path)
 url = "data.csv"
@@ -21,10 +22,12 @@ dataset = pandas.read_csv(url, names = features)
 
 # store the dataset as an array for easier processing
 array = dataset.values
+scaler = MinMaxScaler(feature_range=(0,1))
+scaled = scaler.fit_transform(array)
 # X stores feature values
-X = array[:,0:22]
+X = scaled[:,0:22]
 # Y stores "answers", the flower species / class (every row, 4th column)
-Y = array[:,22]
+Y = scaled[:,22]
 validation_size = 0.20
 # randomize which part of the data is training and which part is validation
 seed = 7
