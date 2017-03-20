@@ -24,5 +24,5 @@ Matthews Coefficient: 0.000
 
 ## Boosted Algorithm Performance
 ### Gradient Boost
-Accuracy: 94.9%
+Accuracy: 94.9%  
 Matthews Coefficient: 0.820
