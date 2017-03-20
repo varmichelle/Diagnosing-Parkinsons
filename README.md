@@ -1,2 +1,2 @@
 # ML-Disease-Diagnosis
-Synopsys / ISEF project: Disease classification and diagnosis for Alzheimer's and Parkinson's
+Synopsys project: Classification and diagnosis of Parkinson's Disease Edit
