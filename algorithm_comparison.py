@@ -11,6 +11,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 
 # load the dataset (local path)
@@ -44,6 +45,7 @@ models.append(('LR', LogisticRegression()))
 models.append(('LDA', LinearDiscriminantAnalysis()))
 models.append(('KNN', KNeighborsClassifier()))
 models.append(('DT', DecisionTreeClassifier()))
+models.append(('NN', MLPClassifier(solver='lbfgs')))
 models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
 
