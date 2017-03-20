@@ -18,6 +18,10 @@ Matthews Coefficient: 0.366
 Accuracy: 84.1%  
 Matthews Coefficient: 0.634
 
+### Neural Network
+Accuracy: 87.2%
+Matthews Coefficient: 0.503
+
 ### Support Vector Machine
 Accuracy: 78.1%  
 Matthews Coefficient: 0.000
