@@ -13,6 +13,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.ensemble import GradientBoostingClassifier
 
 # load the dataset (local path)
 url = "data.csv"
@@ -49,6 +50,7 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('DT', DecisionTreeClassifier()))
 models.append(('NN', MLPClassifier(solver='lbfgs')))
 models.append(('NB', GaussianNB()))
+models.append(('GB', GradientBoostingClassifier(n_estimators=10000)))
 
 # evaluate each algorithm / model
 results = []
