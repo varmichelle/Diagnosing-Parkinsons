@@ -47,7 +47,7 @@ models.append(('KNN', KNeighborsClassifier()))
 models.append(('DT', DecisionTreeClassifier()))
 models.append(('NN', MLPClassifier(solver='lbfgs')))
 models.append(('NB', GaussianNB()))
-models.append(('GB'), GradientBoostingClassifier(n_estimators=10000))
+models.append(('GB', GradientBoostingClassifier(n_estimators=10000)))
 
 # evaluate each algorithm / model
 results = []
