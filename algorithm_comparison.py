@@ -13,6 +13,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import accuracy_score
 
 # load the dataset (local path)
 url = "data.csv"
@@ -26,7 +27,7 @@ array = dataset.values
 X = array[:,0:22]
 # Y stores "answers", the flower species / class (every row, 4th column)
 Y = array[:,22]
-validation_size = 0.20
+validation_size = 0.3
 # randomize which part of the data is training and which part is validation
 seed = 7
 # split dataset into training set (80%) and validation set (20%)
@@ -58,7 +59,8 @@ for name, model in models:
     cv_results = cross_validation.cross_val_score(model, X_train, Y_train, cv = kfold, scoring = scoring)
     results.append(cv_results)
     names.append(name)
-    print(name, ":", 100.0*cv_results.mean(), "%")
     model.fit(X_train, Y_train)
     predictions = model.predict(X_validation)
+    print(name, accuracy_score(Y_validation, predictions)*100)
     print(matthews_corrcoef(Y_validation, predictions))
+    print()
