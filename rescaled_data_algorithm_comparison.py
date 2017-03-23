@@ -14,6 +14,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score
+from sklearn import tree
 
 # load the dataset (local path)
 url = "data.csv"
@@ -44,13 +45,13 @@ scoring = 'accuracy'
 
 # algorithms / models
 models = []
-models.append(('LR', LogisticRegression()))
-"""models.append(('LDA', LinearDiscriminantAnalysis()))
-models.append(('KNN', KNeighborsClassifier()))
+#models.append(('LR', LogisticRegression()))
+#models.append(('LDA', LinearDiscriminantAnalysis()))
+#models.append(('KNN', KNeighborsClassifier()))
 models.append(('DT', DecisionTreeClassifier()))
-models.append(('NN', MLPClassifier(solver='lbfgs')))
-models.append(('NB', GaussianNB()))
-models.append(('GB', GradientBoostingClassifier(n_estimators=10000)))"""
+#models.append(('NN', MLPClassifier(solver='lbfgs')))
+#models.append(('NB', GaussianNB()))
+#models.append(('GB', GradientBoostingClassifier(n_estimators=10000)))
 
 # evaluate each algorithm / model
 results = []
@@ -65,4 +66,4 @@ for name, model in models:
     predictions = model.predict(X_validation)
     print(name, accuracy_score(Y_validation, predictions)*100)
     print(matthews_corrcoef(Y_validation, predictions))
-    print(model.coef_)
+    tree.export_graphviz(model, out_file="tree.dot")
