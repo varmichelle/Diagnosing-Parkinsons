@@ -49,8 +49,11 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 
 ## Data
 ![a_o](https://cloud.githubusercontent.com/assets/9922999/25514158/aaa7b054-2b8f-11e7-97fe-b7f51dee9bc0.png)
+
 ![a_r](https://cloud.githubusercontent.com/assets/9922999/25514157/aaa6e32c-2b8f-11e7-8b17-b4689f54f559.png)
+
 ![m_o](https://cloud.githubusercontent.com/assets/9922999/25514156/aa8ba77e-2b8f-11e7-9604-4573c56bd092.png)
+
 ![m_r](https://cloud.githubusercontent.com/assets/9922999/25514159/aaa96d54-2b8f-11e7-8472-266dcea313e5.png)
 
 ## Data Analysis
