@@ -36,3 +36,13 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 - 22 features (elements that are possibly characteristic of Parkinson’s, such as frequency, pitch, amplitude / period of the sound wave)
 - 1 label (1 for Parkinson’s, 0 for no Parkinson’s)
 
+## Project Pipeline
+
+## Summary of Procedure
+- Split the Oxford Parkinson’s Dataset into two parts: one for training, one for validation (evaluate how well the model performs)
+- Train each of the following algorithms with the training set: Logistic Regression, Linear Discriminant Analysis, k Nearest Neighbors, Decision Tree, Neural Network, Naive Bayes, Gradient Boost
+- Evaluate results using the validation set
+- Repeat for the following training set to validation set splits: 80% training / 20% validation, 75% / 25%, and 70% / 30%
+- Repeat for a rescaled version of the dataset (scale all the numbers in the dataset to a range from 0 to 1: this helps to reduce the effect of outliers)
+- Conduct 5 trials and average the results
+
