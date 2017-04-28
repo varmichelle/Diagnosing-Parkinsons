@@ -51,3 +51,12 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 ## Data Analysis
 - In general, the models tended to perform the best (both in terms of accuracy and Matthews Correlation Coefficient) on the rescaled dataset with a 75-25 train-test split. 
 - The two highest performing algorithms, k Nearest Neighbors and the Neural Network, both achieved an accuracy of 98%. The NN achieved a MCC of 0.96, while KNN achieved a MCC of 0.94. These figures outperform most existing literature and significantly outperform current methods of diagnosis.
+
+## Conclusion and Significance
+- These robust results suggest that a machine learning approach can indeed be implemented to significantly improve diagnosis methods of Parkinson’s disease. Given the necessity of early diagnosis for effective treatment, my machine learning models provide a very promising alternative to the current, rather ineffective method of diagnosis.
+- Current methods of early diagnosis are only 53% accurate, while my machine learning model produces 98% accuracy. This 45% increase is critical because an accurate, early diagnosis is needed to effectively treat the disease. 
+- Typically, by the time the disease is diagnosed, 60% of nigrostriatal neurons have degenerated, and 80% of striatal dopamine have been depleted. 
+- With an earlier diagnosis, much of this degradation could have been slowed or treated.
+- My results are very significant because Parkinson’s affects over 10 million people worldwide who could benefit greatly from an early, accurate diagnosis.
+- Not only is my machine learning approach more accurate in terms of diagnostic accuracy, it is also more scalable, less expensive, and therefore more accessible to people who might not have access to established medical facilities and professionals. 
+- The diagnosis is also much simpler, requiring only a 10-15 second voice recording and producing an immediate diagnosis.
