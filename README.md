@@ -46,3 +46,8 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 - Repeat for a rescaled version of the dataset (scale all the numbers in the dataset to a range from 0 to 1: this helps to reduce the effect of outliers)
 - Conduct 5 trials and average the results
 
+## Data
+
+## Data Analysis
+- In general, the models tended to perform the best (both in terms of accuracy and Matthews Correlation Coefficient) on the rescaled dataset with a 75-25 train-test split. 
+- The two highest performing algorithms, k Nearest Neighbors and the Neural Network, both achieved an accuracy of 98%. The NN achieved a MCC of 0.96, while KNN achieved a MCC of 0.94. These figures outperform most existing literature and significantly outperform current methods of diagnosis.
