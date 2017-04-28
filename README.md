@@ -37,6 +37,7 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 - 1 label (1 for Parkinson’s, 0 for no Parkinson’s)
 
 ## Project Pipeline
+![pipeline](https://cloud.githubusercontent.com/assets/9922999/25513968/0a14cf74-2b8e-11e7-8fd7-4e63226a7d55.png)
 
 ## Summary of Procedure
 - Split the Oxford Parkinson’s Dataset into two parts: one for training, one for validation (evaluate how well the model performs)
