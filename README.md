@@ -60,3 +60,13 @@ Produce a machine learning model to diagnose Parkinson’s disease given various
 - My results are very significant because Parkinson’s affects over 10 million people worldwide who could benefit greatly from an early, accurate diagnosis.
 - Not only is my machine learning approach more accurate in terms of diagnostic accuracy, it is also more scalable, less expensive, and therefore more accessible to people who might not have access to established medical facilities and professionals. 
 - The diagnosis is also much simpler, requiring only a 10-15 second voice recording and producing an immediate diagnosis.
+
+
+## Future Research
+- Given more time and resources, I would investigate the following:
+- Create a mobile application which would allow the user to record his/her voice, extract the necessary vocal features, and feed it into my machine learning model to diagnose Parkinson’s.
+- Use larger datasets in conjunction with the University of Oxford dataset.
+- Tune and improve my models even further to achieve even better results.
+- Investigate different structures and types of neural networks.
+- Construct a novel algorithm specifically suited for the prediction of Parkinson’s.
+- Generalize my findings and algorithms for all types of dementia disorders, such as Alzheimer’s.
