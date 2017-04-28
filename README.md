@@ -29,3 +29,10 @@
 
 ## Engineering Goal
 Produce a machine learning model to diagnose Parkinson’s disease given various features of a patient’s speech with at least 90% accuracy and/or a Matthews Correlation Coefficient of at least 0.9. Compare various algorithms and parameters to determine the best model for predicting Parkinson’s.
+
+## Dataset Description
+- Source: the University of Oxford
+- 195 instances (147 subjects with Parkinson’s, 48 without Parkinson’s)
+- 22 features (elements that are possibly characteristic of Parkinson’s, such as frequency, pitch, amplitude / period of the sound wave)
+- 1 label (1 for Parkinson’s, 0 for no Parkinson’s)
+
