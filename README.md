@@ -12,3 +12,9 @@
 - Parkinson’s is a progressive neurodegenerative condition resulting from the death of the dopamine containing cells of the substantia nigra (which plays an important role in movement). 
 - Symptoms include: “frozen” facial features, bradykinesia (slowness of movement), akinesia (impairment of voluntary movement), tremor, and voice impairment.
 - Typically, by the time the disease is diagnosed, 60% of nigrostriatal neurons have degenerated, and 80% of striatal dopamine have been depleted. 
+
+### Performance Metrics
+- * TP = true positive, FP = false positive, TN = true negative, FN = false negative
+- Accuracy: (TP+TN)/(P+N)
+- Matthews Correlation Coefficient: 1=perfect, 0=random, -1=completely inaccurate 
+
