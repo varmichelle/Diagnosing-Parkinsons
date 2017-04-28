@@ -27,3 +27,5 @@
 - Naive Bayes (NB): Simplifies the calculation of probabilities by assuming that all features are independent of one another (a strong but effective assumption). Employs Bayes Theorem: to calculate the probabilities that the instance to be predicted is in each class, then finds the class with the highest probability.
 - Gradient Boost (GB): Generally used when seeking a model with very high predictive performance. Used to reduce bias and variance (“error”) by combining multiple “weak learners” (not very good models) to create a “strong learner” (high performance model). Involves 3 elements: a loss function (error function) to be optimized, a weak learner (decision tree) to make predictions, and an additive model to add trees to minimize the loss function. Gradient descent is used to minimize error after adding each tree (one by one). 
 
+## Engineering Goal
+Produce a machine learning model to diagnose Parkinson’s disease given various features of a patient’s speech with at least 90% accuracy and/or a Matthews Correlation Coefficient of at least 0.9. Compare various algorithms and parameters to determine the best model for predicting Parkinson’s.
